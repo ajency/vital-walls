@@ -4926,7 +4926,7 @@ body .woocommerce form .form-row .button {
   background-position: 0 -18.5em;
 }
 .h-i-w .flex-cols .c-icon.done {
-  background-position: 0 -27.49999999em;
+  background-position: 0 -27.5em;
 }
 .h-i-w .flex-cols .content {
   font-size: 1em;
@@ -5851,14 +5851,10 @@ abbr {
 .wpb-js-composer .custom-accordion.vc_tta-color-grey.vc_tta.vc_tta-style-classic .vc_tta-panel-body ol li {
   font-weight: 500;
 }
-#footer #menu-footer1,
-#footer #menu-footer2,
-#footer #menu-footer3 {
+#footer ul {
   border: none;
 }
-#footer #menu-footer1 li a,
-#footer #menu-footer2 li a,
-#footer #menu-footer3 li a {
+#footer ul li a {
   border-left: none;
   color: #fff;
   background: transparent;
@@ -5866,12 +5862,39 @@ abbr {
 #main-wrapper .hb-accordion-single .hb-accordion-tab {
   background: transparent;
   border-color: transparent;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #999;
 }
 #main-wrapper .hb-accordion-single .hb-accordion-tab.active-toggle {
-  color: #000;
+  font-weight: 600;
 }
 #main-wrapper .hb-accordion-single .hb-accordion-pane {
   background: transparent;
   border: none;
+}
+.icon-heart:after {
+  content: "\f004";
+  font-family: FontAwesome;
+}
+.icon-picture:after {
+  content: "\f03e";
+  font-family: FontAwesome;
+}
+.icon-magic:after {
+  content: "\f0d0";
+  font-family: FontAwesome;
+}
+.hb-moon-plus-circle:after {
+  content: "\f055";
+  font-family: FontAwesome;
+  font-style: normal;
+}
+.icon-angle-right:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-style: normal;
+}
+.active-toggle.hb-accordion-tab i.icon-angle-right:before {
+  content: "\f078" !important;
+  font-family: FontAwesome;
+  font-style: normal;
 }

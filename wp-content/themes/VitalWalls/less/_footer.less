@@ -1,7 +1,5 @@
 #footer {
-	#menu-footer1,
-	#menu-footer2,
-	#menu-footer3 {
+	ul {
 		border: none;
 		li {
 			a {
@@ -19,9 +17,9 @@
 		.hb-accordion-tab {
 			background: transparent;
 			border-color: transparent;
-			border-bottom: 1px solid #fff;
+			border-bottom: 1px solid #999;
 			&.active-toggle {
-				color: #000;
+				font-weight: 600;
 			}
 			
 		}
@@ -30,4 +28,47 @@
 			border: none;
 		}
 	}
+}
+
+.icon-heart {
+    &:after {
+        content: "\f004";
+        font-family: FontAwesome;
+    }
+}
+
+.icon-picture {
+    &:after {
+        content: "\f03e";
+        font-family: FontAwesome;
+    }
+}
+
+.icon-magic {
+    &:after {
+        content: "\f0d0";
+        font-family: FontAwesome;
+    }
+}
+
+.hb-moon-plus-circle {
+    &:after {
+        content: "\f055";
+        font-family: FontAwesome;
+        font-style: normal;
+    }
+}
+
+.icon-angle-right {
+    &:before {
+        content: "\f054";
+        font-family: FontAwesome;
+        font-style: normal;
+    }
+}
+
+.active-toggle.hb-accordion-tab i.icon-angle-right:before {
+    content: "\f078" !important;
+    font-family: FontAwesome;
+    font-style: normal;
 }
