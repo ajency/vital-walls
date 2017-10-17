@@ -392,7 +392,7 @@ jQuery(document).ready(function() {
   jQuery('#frame_size').val('small').change();
 
   var frameLabel = "<span class='summary-label'>Painting Price: </span>";
-  jQuery('body').on('change', '#size', function(event){
+  jQuery('body').on('change', '[name="attribute_size"]', function(event){
   	if (jQuery(this).val() == "Small"){
   		jQuery('#frame_size').val('small').change();
   		jQuery('.nm-productmeta-box input[value="no frame"]').prop('checked', true);

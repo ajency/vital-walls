@@ -1,0 +1,60 @@
+// size variantions
+
+table.variations {
+	margin-bottom: 35px !important;  
+	td.value {
+		div {
+			display: inline-block;
+			position: relative;
+			width: 85px;
+			text-align: center;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+			input[type="radio"] {
+				visibility: hidden;
+				position: ABSOLUTE;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				& + label {
+					border: 1px solid #ccc;
+					padding: 12px 14px 12px 28px;
+					cursor: pointer;
+					position: relative;
+					&:after {
+						position: absolute;
+						bottom: -15px;
+						right: 0;
+						font-size: 10px;
+						white-space: nowrap;
+						color: #777;
+					}
+				}
+				&:checked {
+					& + label {
+						border: 2px solid @brand-primary;
+					}
+				}
+				&#size_v_Small {
+					& + label:after {
+						content: "30cm x 35.90cm";
+					}
+				}
+				&#size_v_Medium {
+					& + label:after {
+						content: "40cm x 53.80cm";
+					}
+				}
+				&#size_v_Large {
+					& + label:after {
+						content: "60cm x 71.80cm";
+					}
+				}
+			}
+		}
+	}
+}

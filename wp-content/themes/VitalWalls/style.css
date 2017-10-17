@@ -4926,7 +4926,7 @@ body .woocommerce form .form-row .button {
   background-position: 0 -18.5em;
 }
 .h-i-w .flex-cols .c-icon.done {
-  background-position: 0 -27.5em;
+  background-position: 0 -27.49999999em;
 }
 .h-i-w .flex-cols .content {
   font-size: 1em;
@@ -5897,4 +5897,52 @@ abbr {
   content: "\f078" !important;
   font-family: FontAwesome;
   font-style: normal;
+}
+table.variations {
+  margin-bottom: 35px !important;
+}
+table.variations td.value div {
+  display: inline-block;
+  position: relative;
+  width: 85px;
+  text-align: center;
+}
+table.variations td.value div:not(:last-child) {
+  margin-right: 10px;
+}
+table.variations td.value div input[type="radio"] {
+  visibility: hidden;
+  position: ABSOLUTE;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+table.variations td.value div input[type="radio"] + label {
+  border: 1px solid #ccc;
+  padding: 12px 14px 12px 28px;
+  cursor: pointer;
+  position: relative;
+}
+table.variations td.value div input[type="radio"] + label:after {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  font-size: 10px;
+  white-space: nowrap;
+  color: #777;
+}
+table.variations td.value div input[type="radio"]:checked + label {
+  border: 2px solid #b2702a;
+}
+table.variations td.value div input[type="radio"]#size_v_Small + label:after {
+  content: "30cm x 35.90cm";
+}
+table.variations td.value div input[type="radio"]#size_v_Medium + label:after {
+  content: "40cm x 53.80cm";
+}
+table.variations td.value div input[type="radio"]#size_v_Large + label:after {
+  content: "60cm x 71.80cm";
 }
