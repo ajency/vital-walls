@@ -41,21 +41,41 @@ if ( ! empty( $tabs ) ) : ?>
 <div class="art-info">
 	<div class="art-details">
 		<h3>
-			Artwork Details
+			Product Key Features
 		</h3>
 		<ul>
-			<li>Finish: Colourfast Ink on Canvas</li>
-			<li>Wipeable &amp; dustable. Easy to maintain. Ready to Mount on Wall</li>
+			<li>Material: Canvas</li>
+			<li>Color: Multi-Color</li>
+			<li>Finish: Colorfast Ink on Canvas</li>
+			<li>Wipeable &amp; Dustable, Easy to maintain </li>
 			<li>Package Contents: 1 Digital Art Print on Premium Canvas</li>
-			<li>Premium Canvas Art Print. This Art Print is a Best Seller. </li>
-			<li>This Painting is a Exquisite Painting by the Famous Artist. </li>
-			<li>The canvas print is sure to add beauty and aesthetics to your space.</li>
-			<li>This Art print offers beautiful color accuracy on a high-quality canvas that is ready for framing. </li>
-			<li>Giclée (French for “to spray”) is a printing process where millions of ink droplets are sprayed onto the canvas surface creating natural color transitions. </li>
-			<li>Size: 30 cm X 38.1 cm Best Selling Art Print. High Quality Canvas with Long Lasting Ink. </li>
-			<li>In the Box: Gallery Wrapped on Pure Wooden Frame, Ready to Mount on Wall.</li>
-			<li>Best Selling, High Quality Canvas Art Print.
+			<li>Painting Available with Frame and Without Frame</li>
+			<li>Frame as per buyer choice </li>
+			<li>Frame Material: Pure Wooden and PVC </li>
 		</ul>
+	</div>
+
+	<div class="frame-types">
+
+    	<div class="type-wrapper">
+    		<div class="type-info desc">
+				<h3 class="text-left">
+					Product Description
+				</h3>
+    			<p>
+					Premium Canvas Art Print, Ready to Frame. This Art Print is a Best Seller. This Painting is a exquisite Painting
+					by the Famous Artist. The canvas print is sure to add beauty and aesthetics to your space. This Art print
+					offers beautiful color accuracy on a high-quality canvas that is ready for framing. Giclée (French for “to
+					spray”) is a printing process where millions of ink droplets are sprayed onto the canvas surface creating
+					natural color transitions
+				</p>
+    		</div>
+
+    		<div class="type-image desc">
+    			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(  ), 'single-post-thumbnail' );?>
+	    		<img src="<?php  echo $image[0]; ?>">
+    		</div>
+    	</div>
 	</div>
 
 	<div class="frame-sizes">
@@ -100,7 +120,25 @@ if ( ! empty( $tabs ) ) : ?>
 		</div>
 	</div>
 
-	<ul class="benefits">
+	<div class="art-desc">
+		<h3>
+			Return Policy
+		</h3>
+		<p>
+			Seller will accept returns within 7 days from date of delivery of the item only in case of damaged, defective, wrong products and in wrong size received.
+		</p>
+	</div>
+
+	<div class="art-desc">
+		<h3>
+			Important Note
+		</h3>
+		<p>
+			The images represent actual product though color of the image and product may slightly differ.
+		</p>
+	</div>
+
+	<!-- <ul class="benefits">
 		<li class="free_delivery">
 			<div class="element">
 				<div class="fa fa-truck"></div>
@@ -157,6 +195,6 @@ if ( ! empty( $tabs ) ) : ?>
 				</div>
 			</div>
 		</li>
-	</ul>
+	</ul> -->
 
 </div>

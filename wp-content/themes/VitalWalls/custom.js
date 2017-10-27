@@ -405,7 +405,7 @@ jQuery(document).ready(function() {
   	}else {
   		jQuery('#frame_size').val('').change();
   	}
-  	jQuery('.single_variation_wrap .woocommerce-variation-price .price').prepend(frameLabel);
+  	// jQuery('.single_variation_wrap .woocommerce-variation-price .price').prepend(frameLabel);
   	// setTimeout(function(){
   	// }, 500);
 
