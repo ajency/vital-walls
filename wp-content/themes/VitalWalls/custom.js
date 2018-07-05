@@ -391,21 +391,40 @@ jQuery(document).ready(function() {
 
   jQuery('#frame_size').val('small').change();
 
-  var frameLabel = "<span class='summary-label'>Painting Price: </span>";
+  var frameLabel = "<span class='summary-label paint_price'>Painting Price: </span>";
   jQuery('body').on('change', '[name="attribute_size"]', function(event){
   	if (jQuery(this).val() == "Small"){
   		jQuery('#frame_size').val('small').change();
-  		jQuery('.nm-productmeta-box input[value="no frame"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[value="no frame"][name="frames_small"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[name="frames"]').prop('checked', false);
+  		jQuery('.nm-productmeta-box input[name="frames_large"]').prop('checked', false);
   	} else if (jQuery(this).val() == "Medium"){
   		jQuery('#frame_size').val('medium').change();
-  		jQuery('.nm-productmeta-box input[value="no frame"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[value="no frame"][name="frames"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[name="frames_small"]').prop('checked', false);
+  		jQuery('.nm-productmeta-box input[name="frames_large"]').prop('checked', false);
   	}else if (jQuery(this).val() == "Large"){
   		jQuery('#frame_size').val('large').change();
-  		jQuery('.nm-productmeta-box input[value="no frame"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[value="no frame"][name="frames_large"]').prop('checked', true);
+  		jQuery('.nm-productmeta-box input[name="frames_small"]').prop('checked', false);
+  		jQuery('.nm-productmeta-box input[name="frames"]').prop('checked', false);
   	}else {
   		jQuery('#frame_size').val('').change();
   	}
-  	// jQuery('.single_variation_wrap .woocommerce-variation-price .price').prepend(frameLabel);
+
+  	var variationsArr = jQuery(".variations_form").data('product_variations');
+  	
+  	for (var i = 0; i < variationsArr.length; i++) {
+  		if(variationsArr[i].attributes.attribute_size == jQuery(this).val()) {
+  			jQuery('.woocommerce-variation-description').find('p').replaceWith(variationsArr[i].variation_description);
+  			jQuery('.woocommerce-variation-price').find('.price').replaceWith(variationsArr[i].price_html);
+  			jQuery('input[name=variation_id]').val(variationsArr[i].variation_id);
+  		}
+  	}
+  	
+  	jQuery('.single_variation_wrap .woocommerce-variation-price .price').find('.paint_price').remove();
+  	jQuery('.single_variation_wrap .woocommerce-variation-price .price').prepend(frameLabel);
+
   	// setTimeout(function(){
   	// }, 500);
 
@@ -416,7 +435,10 @@ jQuery(document).ready(function() {
   // 	console.log(newAmount)
   // });
 
+  jQuery('input[name="attribute_size"][value="Small"]').prop('checked', true);
+
   setTimeout(function(){
+  	jQuery('.single_variation_wrap .woocommerce-variation-price .price').find('.paint_price').remove();
   	jQuery('.single_variation_wrap .woocommerce-variation-price .price').prepend(frameLabel);
   }, 1000);
 
