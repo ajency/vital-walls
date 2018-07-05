@@ -4295,13 +4295,17 @@ body .woocommerce form .form-row .button {
       flex-basis: 40%;
 }
 #main-content .type-image.frame-1 {
-  background-image: url(img/frameimage1.jpg);
+  background-image: url(img/frame_back.jpg);
 }
 #main-content .type-image.frame-2 {
-  background-image: url(img/frameimage2.jpg);
+  background-image: url(img/BlackFrameFull.png);
+  background-size: 100% 100%;
+  margin: 10px;
 }
 #main-content .type-image.frame-3 {
-  background-image: url(img/frameimage3.jpg);
+  background-image: url(img/BrownFrameFull.jpg);
+  background-size: 100% 100%;
+  margin: 10px;
 }
 #main-content .type-image.desc {
   -ms-flex-preferred-size: 25%;
