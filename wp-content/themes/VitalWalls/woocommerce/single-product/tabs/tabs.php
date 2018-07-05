@@ -93,11 +93,15 @@ if ( ! empty( $tabs ) ) : ?>
 			Frame Types
 		</h3>
 		<div class="type-wrapper">
+			<div class="type-image desc">
+    			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(  ), 'single-post-thumbnail' );?>
+	    		<img src="<?php  echo $image[0]; ?>">
+    		</div>
 			<div class="type-image frame-1"></div>
 			<div class="type-info">
 				<h5>Wooden Frame</h5>
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					Pure wooden frame used for canvas painting, canvas are properly aligned, stretched and wrapped on wooden frame and fixed with stapled as shown in the image. It’s ready to mount on wall.
 				</p>
 			</div>
 		</div>
@@ -105,19 +109,20 @@ if ( ! empty( $tabs ) ) : ?>
 			<div class="type-info text-right">
 				<h5>PVC Frame</h5>
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					Fiber (PVC) Frame used for canvas painting, as shown in the image. It’s ready to mount on wall.
 				</p>
 			</div>
 			<div class="type-image frame-2"></div>
+			<div class="type-image frame-3"></div>
 		</div>
 
-		<div class="back-wrapper">
+		<!--div class="back-wrapper">
 			<div class="back-text">
 				<h6>But what about the back?</h6>
 				<p>Here's a sample view of the backside of a painting with a frame so you know what to expect. </p>
 			</div>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/frame_back.jpg">
-		</div>
+		</div-->
 	</div>
 
 	<div class="art-desc">
